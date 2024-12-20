@@ -1,0 +1,13 @@
+CREATE TABLE USER (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user VARCHAR(255),
+  pass VARCHAR(255)
+);
+
+CREATE TABLE TODO_ITEM (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  userId INT,
+  task VARCHAR(255),
+  done BOOLEAN,
+  deadline date
+);

@@ -1,0 +1,58 @@
+extends default
+block content
+    .row
+        .column
+            //- list todo list items
+            div.items(id='items')
+                each item in items
+                    div.item(id=`item_${item.id}`)
+                        .row
+                            .column
+                                span.itemTask #{item.task}
+
+                            .column
+                                //- span.doneSpan Done
+                                input.doneCheckbox(type="checkbox" id=`done_${item.id}` name=`done_${item.id}` value="#{item.done}" onclick=`handleDoneToggle(${item.id})` checked=(item.done == 1))
+                                
+                        .row 
+                            .column 
+                                span.itemDeadline #{item.deadline}
+                            .column
+                                //- span.doneSpan Delete
+                                button.deleteButton(type="button" id="deleteButton" name="deleteButton" onclick=`doDelete(${item.id})`) Delete
+        .column
+            div.displayOptions
+                .row 
+                    .column 
+                        input.displayOptionCheckbox(type="checkbox" id="hideNotOverdue" name="hideNotOverdue" onclick="hideNotOverdue()") 
+                    .column
+                        span.displayOptionText Show only overdue items
+                .row 
+                    .column
+                        input.displayOptionCheckbox(type="checkbox" id="hideDone" name="hideDone" onclick="hideFinished()") 
+                    .column
+                        span.displayOptionText Hide finished items
+                .row 
+                    .column
+                        button.displayOptionCheckbox(type="button" id="sort" name="sort" onclick="sortByDeadline()")
+                    .column 
+                        span.displayOptionText Sort by deadline
+            div.createForm 
+                h1 Create Task
+                //- input#userId(name='userId' type='hidden' value=`${listing.id}`)
+                .row 
+                    .column
+                        label(for='title') Name
+                    .column 
+                        input.title(name='title' id='title' type='text' value=`` placeholder='Enter title' required)
+                .row 
+                    .column
+                        label(for='deadline') Deadline
+                    .column
+                        input.deadline(name='deadline' id='deadline' type='date' placeholder='' required)
+                button.itemSubmit(onclick=`attemptItemCreate(${userId})`) Submit
+        //- make options panel where users can select if they want to view:
+            //- overdue or not overdue
+            //- in sorted order based on deadline
+            //- done or not done
+    script(src='/js/todo.js')

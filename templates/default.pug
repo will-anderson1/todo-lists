@@ -1,0 +1,16 @@
+doctype html
+head
+  link(rel='stylesheet' href='/css/main.css')
+  meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+  title TODO
+
+nav.topNav
+  ul
+    li
+      a(href='/login') Login
+    li
+      a(href='/todo') TODO List
+    li
+      a(href='/login' onclick="logout()") Log Out
+block content
+script(src="js/logout.js")

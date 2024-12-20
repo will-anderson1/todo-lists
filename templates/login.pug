@@ -1,0 +1,11 @@
+extends default 
+block content
+    form.loginForm(onsubmit="return handleSubmit()")
+        label(for='user') Username
+        input.username(name='user' id='user' type='text' value=`` placeholder='Enter username' required)
+
+        label(for='password') Password
+        input.password(name='password' id='password' type='text' value=`` placeholder='Enter password' required)
+        a(href=`${linkToOtherPage}`) #{otherActionString}
+        button.submit(type='button' onclick="handleSubmit()") #{actionString}
+    script(src=`${jsFile}`)

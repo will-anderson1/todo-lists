@@ -1,0 +1,223 @@
+.topNav {
+    display:flex;
+    align-items: center;
+    background-color: #1ca67b;
+    position: sticky;
+    top: 0px;
+
+    width: 100%;
+}
+
+.topNav a {
+    display:block;
+    color:#b9ffdb;
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 5% 5%;
+    border-radius: 10px;
+    text-align: center;
+    /* padding-left: 2vw;
+    padding-right: 2vw; */
+}
+.topNav a:hover {
+    background-color: #71b9a2;;
+}
+.topNav ul {
+    display:flex;
+}
+/* https://stackoverflow.com/questions/26189587/how-to-make-a-text-or-html-tag-look-like-a-button */
+.topNav li {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 10vw;
+    background: #016b59;
+    border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 100%;
+    /* padding-left: 2vw;
+    padding-right: 2vw; */
+}
+
+h1 {
+    text-align: center;
+    font-style: normal;
+    margin-top: 1%
+}
+
+.row {
+    display: flex;
+    width: 100%
+}
+  
+.column {
+    flex: 50%;
+}
+
+
+.items {
+    /* margin-right:5vw; */
+    width: 65vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    float:inline-start;
+}
+.item {
+    border: 1px solid;
+    width: 65vw;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    background-color: #b9ffdb;
+    display: block
+
+}
+.itemTask {
+    font-weight: bold;
+    font-size: 2em; 
+    display: block;
+    margin:10px;
+}
+.itemDeadline {
+    float: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333dd;
+    margin: 10px;
+}
+/* https://stackoverflow.com/questions/4137255/checkboxes-in-web-pages-how-to-make-them-bigger */
+.doneCheckbox{
+    float:right;
+    -webkit-appearance:none;
+    width:20%;
+    height:80%;
+    background:red;
+    border-radius:5px;
+    border:2px solid #555;
+}
+.doneCheckbox:checked {
+    background: green;
+}
+.deleteButton{
+    width:20%;
+    height:50%;
+    background:#1ca67b;
+    border-radius:5px;
+    border:2px solid #555;
+    float:right;
+}
+.deleteButton:hover {
+    background-color: #6dc7ab;
+}
+.doneSpan{
+    float:right;
+    margin: 1%;
+    font-size:2em
+}
+.displayOptions {
+    background: #1ca67b;
+    width: 70%;
+    padding:5%;
+    margin: auto auto;
+    margin-top: 5vw;
+    border-radius: 15px;
+}
+.displayOptionText{
+    font-weight: bold;
+    font-size: 2em; 
+    display: block;
+    margin:10px;
+}
+.displayOptionCheckbox {
+    float:right;
+    -webkit-appearance:none;
+    width:90%;
+    height:80%;
+    background:red;
+    border-radius:5px;
+    border:2px solid #555;
+}
+.displayOptionCheckbox:checked {
+    background: green;
+}
+button.displayOptionCheckbox:hover {
+    background:rgb(178, 0, 0);
+}
+.createForm{
+    background: #1ca67b;
+    width: 70%;
+    margin: auto auto;
+    margin-top: 5vw;
+    padding:5%;
+    border-radius: 20px;
+}
+.createForm h1{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+.createForm label {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 10px
+}
+.createForm input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.75em;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+.createForm button.itemSubmit {
+    font-size: 1.5em;
+    padding: 5%;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+.loginForm {
+    background-color: #1ca67b;
+    margin: 15% 40%;
+    padding: 20px;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginForm label {
+    font-size: 2em;
+    color: white;
+    margin: 10px;
+}
+.loginForm input, .loginForm button {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.75em;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+.loginForm a {
+    font-size: 2em;
+    height:50%;
+    background:#1ca67b;
+    border-radius:5px;
+}
+
+body {
+    font-size: 13px;
+    margin: 0;
+    background-color: #6dc7ab;
+}
+
